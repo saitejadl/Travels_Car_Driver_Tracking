@@ -3,7 +3,7 @@ import streamlit as st
 st.title('Try to add text')
 
 def write(text):
-    f = open('https://github.com/saitejadl/Travels_Car_Driver_Tracking/blame/9b6b5305714d01eceea6ea60eea6675de4ec5f61/Travels_Car_Driver_Tracking/edit.txt','a')
+    f = open('https://github.com/saitejadl/Travels_Car_Driver_Tracking/blob/244b763cce59328dd1cc12086d589ba97f81a8e3/Travels_Car_Driver_Tracking/edit.txt','a')
     f.write('New input: {}\n'.format(text))
     f.close()
 
