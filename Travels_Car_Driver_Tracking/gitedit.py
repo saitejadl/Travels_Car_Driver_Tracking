@@ -1,4 +1,3 @@
-!pip install PyGithub
 from github import Github
 from github import Auth
 import streamlit as st
