@@ -17,13 +17,13 @@ password = st.sidebar.text_input('Password', value="", type="password")
 if user_name in u_p.keys():
   if u_p[user_name]==password:
     st.sidebar.success("SIGN IN")
-    df = pd.read_csv("/content/Data.txt",sep="|")
+    df = pd.read_csv("Travels_Car_Driver_Tracking/Data.txt",sep="|")
     st.dataframe(data=df,use_container_width=True)
     c1,c2 = st.columns(2)
     with c1:
-      col = st.selectbox("Filter by:", df.columns, help='Car Peru')
+      col = st.selectbox("Filter by:", df.columns)
     with c2:
-      search = st.selectbox("Filter by:", df[col].unique(), help='Car Peru')
+      search = st.selectbox("Filter by:", df[col].unique())
     st.dataframe(data=df[df[col]==search],use_container_width=True)
   else:
     st.sidebar.error("Invalid Password")
@@ -37,7 +37,7 @@ if st.sidebar.button("SIGN UP"):
   if(r_password==r_verify):
     Referal_Code = st.sidebar.text_input('Referal Code', value="")
     if Referal_Code=="saiteja":
-      with open("/content/Users_Password.txt",'a') as d:
+      with open("Travels_Car_Driver_Tracking/Users_Password.txt",'a') as d:
         d.writelines(f",{r_user}:{r_password}")
 
 
