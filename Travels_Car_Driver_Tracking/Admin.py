@@ -31,14 +31,18 @@ else:
     st.sidebar.error("Invalid Username")
 
 if st.sidebar.button("SIGN UP"):
-  r_user = st.sidebar.text_input('Username', value="")
+  r_user = st.sidebar.text_input('New Username', value="")
   r_password = st.sidebar.text_input('Password', value="", type="password")
   r_verify = st.sidebar.text_input('Re-Enter Password', value="", type="password")
   if(r_password==r_verify):
     Referal_Code = st.sidebar.text_input('Referal Code', value="")
     if Referal_Code=="saiteja":
-      with open("Travels_Car_Driver_Tracking/Users_Password.txt",'a') as d:
-        d.writelines(f",{r_user}:{r_password}")
+      if st.button('Register'):
+        with open("Travels_Car_Driver_Tracking/Users_Password.txt",'a') as d:
+          d.writelines(f",{r_user}:{r_password}")
+    else:
+      st.sidebar.error("Invalid Referal")
+
 
 
 
