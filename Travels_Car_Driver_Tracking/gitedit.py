@@ -1,40 +1,8 @@
+from github import Github
+from github import Auth
 import streamlit as st
 
-st.title('Try to add text')
-
-def write(text):
-    f = open('Travels_Car_Driver_Tracking/edit.txt','w')
-    f.write('New input: {}\n'.format(text))
-    f.close()
-
-
-text = st.text_input('Text')
-st.button('Add text to file',on_click = write,args = [text])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# from github import Github
-# from github import Auth
-# import streamlit as st
-
-# st.write(st.experimental_user)
+st.write(st.experimental_user)
 
 # GITHUB_REPO = 'Travels_Car_Driver_Tracking'
 # GITHUB_TOKEN = st.secrets["GITHUB_TOKEN"]
