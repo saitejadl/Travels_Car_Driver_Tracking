@@ -22,6 +22,8 @@ def write(text):
 st.subheader("Balaji Travels Admin")
 with open("Travels_Car_Driver_Tracking/Users_Password.txt",'r') as f:
   a = f.read().split("\n")
+  st.write(f.read())
+  st.write(a)
 keys=[]
 vals=[]
 for i in a:
