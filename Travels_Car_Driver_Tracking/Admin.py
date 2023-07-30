@@ -56,7 +56,7 @@ if(r_password==r_verify):
   Referal_Code = st.sidebar.text_input('Referal Code', value="")
   if Referal_Code=="saiteja":
     st.button('SIGNUP',on_click = write,args = [f'{r_user}:{r_password}'])
-  elif!='':
+  elif Referal_Code!='':
     st.sidebar.error("Invalid Referal")
 
 
