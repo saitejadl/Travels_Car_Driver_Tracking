@@ -29,6 +29,7 @@ for i in a:
   vals.append(i.split(":")[1])
 u_p = dict(zip(keys,vals))
 
+st.sidebar.subheader('SIGNIN', anchor='signin')
 user_name = st.sidebar.text_input('Username', value="")
 password = st.sidebar.text_input('Password', value="", type="password")
 # st.write(u_p[user_name])
@@ -48,17 +49,21 @@ if user_name in u_p.keys():
     st.sidebar.error("Invalid Password")
 elif user_name!='':
     st.sidebar.error("Invalid Username")
+st.sidebar.write("###")
+st.sidebar.write("###")
+st.sidebar.write("###")
+st.sidebar.write("###")
+st.sidebar.write("###")
+st.sidebar.write("###")
 st.sidebar.write("---")
+st.sidebar.write("###")
+st.sidebar.write("###")
+st.sidebar.write("###")
+st.sidebar.write("###")
+st.sidebar.write("###")
+st.sidebar.write("###")
 
-
-st.sidebar.write("###")
-st.sidebar.write("###")
-st.sidebar.write("###")
-st.sidebar.write("###")
-st.sidebar.write("###")
-st.sidebar.write("###")
-st.sidebar.write("###")
-st.sidebar.write("###")
+st.sidebar.subheader('SIGNIN', anchor='signin')
 with st.sidebar.expander("SIGNUP"):
     r_user = st.sidebar.text_input('New Username', value="")
     r_password = st.sidebar.text_input('New Password', value="", type="password")
