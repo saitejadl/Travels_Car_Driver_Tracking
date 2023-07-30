@@ -1,5 +1,23 @@
+from github import Github
+from github import Auth
 import streamlit as st
 import pandas as pd
+
+GITHUB_REPO = 'Travels_Car_Driver_Tracking'
+GITHUB_TOKEN = st.secrets["Git_Hub_Token"]
+auth = Auth.Token(GITHUB_TOKEN)
+g = Github(auth=auth)
+
+def get_file():
+    repo = g.get_user().get_repo(GITHUB_REPO)
+    repo_file = repo.get_contents('Travels_Car_Driver_Tracking/Users_Password.txt')
+    file_text = repo_file.decoded_content.decode()
+    return repo, repo_file, file_text
+def write(text):
+    r, rf,ft = get_file()
+    t = ft + text
+    r.update_file(rf.path,'streamlit commit',t,rf.sha,branch='main')
+
 
 st.subheader("Balaji Travels Admin")
 with open("Travels_Car_Driver_Tracking/Users_Password.txt",'r') as f:
@@ -29,19 +47,17 @@ if user_name in u_p.keys():
     st.sidebar.error("Invalid Password")
 else:
     st.sidebar.error("Invalid Username")
+st.sidebar.write("---")
 
-if st.sidebar.button("SIGN UP"):
-  r_user = st.sidebar.text_input('New Username', value="")
-  r_password = st.sidebar.text_input('New Password', value="", type="password")
-  r_verify = st.sidebar.text_input('Re-Enter Password', value="", type="password")
-  if(r_password==r_verify):
-    Referal_Code = st.sidebar.text_input('Referal Code', value="")
-    if Referal_Code=="saiteja":
-      if st.button('Register'):
-        with open("Travels_Car_Driver_Tracking/Users_Password.txt",'a') as d:
-          d.writelines(f",{r_user}:{r_password}")
-    else:
-      st.sidebar.error("Invalid Referal")
+r_user = st.sidebar.text_input('New Username', value="")
+r_password = st.sidebar.text_input('New Password', value="", type="password")
+r_verify = st.sidebar.text_input('Re-Enter Password', value="", type="password")
+if(r_password==r_verify):
+  Referal_Code = st.sidebar.text_input('Referal Code', value="")
+  if Referal_Code=="saiteja":
+    st.button('SIGNUP',on_click = write,args = [f'{r_user}:{r_password}'])
+  else:
+    st.sidebar.error("Invalid Referal")
 
 
 
