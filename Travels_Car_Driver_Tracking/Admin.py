@@ -33,7 +33,7 @@ user_name = st.sidebar.text_input('Username', value="")
 password = st.sidebar.text_input('Password', value="", type="password")
 
 if user_name in u_p.keys():
-  if u_p[user_name]==password:
+  if password==u_p[user_name]:
     st.sidebar.success("SIGN IN")
     df = pd.read_csv("Travels_Car_Driver_Tracking/Data.txt",sep="|")
     st.dataframe(data=df,use_container_width=True)
@@ -43,9 +43,9 @@ if user_name in u_p.keys():
     with c2:
       search = st.selectbox("Filter by:", df[col].unique())
     st.dataframe(data=df[df[col]==search],use_container_width=True)
-  else:
+  elif password=='':
     st.sidebar.error("Invalid Password")
-else:
+elif user_name=='':
     st.sidebar.error("Invalid Username")
 st.sidebar.write("---")
 
