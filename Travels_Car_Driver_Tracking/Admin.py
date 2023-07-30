@@ -15,13 +15,13 @@ def get_file():
     return repo, repo_file, file_text
 def write(text):
     r, rf,ft = get_file()
-    t = ft.replace("\n", "")[:-2] + text + '  '
+    t = ft.replace("\n", "") + text
     r.update_file(rf.path,'streamlit commit',t,rf.sha,branch='main')
 
 
 st.subheader("Balaji Travels Admin")
 with open("Travels_Car_Driver_Tracking/Users_Password.txt",'r') as f:
-  a = f.readline()[:-2].split(",")
+  a = f.readline().split(",")
   st.sidebar.write(a)
 keys=[]
 vals=[]
