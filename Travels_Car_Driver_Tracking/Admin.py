@@ -51,7 +51,7 @@ elif user_name!='':
 st.sidebar.write("---")
 
 
-st.sidebar.empty()
+st.write("###")
 st.sidebar.empty()
 st.sidebar.empty()
 st.sidebar.empty()
