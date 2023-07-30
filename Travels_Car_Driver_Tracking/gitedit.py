@@ -20,7 +20,7 @@ def write(text):
 
 def get_file():
     repo = g.get_user().get_repo(GITHUB_REPO)
-    repo_file = repo.get_contents('tests/test_1.txt')
+    repo_file = repo.get_contents('Travels_Car_Driver_Tracking/edit.txt')
     file_text = repo_file.decoded_content.decode()
     return repo, repo_file, file_text
 
