@@ -63,7 +63,7 @@ st.sidebar.write("###")
 st.sidebar.write("###")
 st.sidebar.write("###")
 
-st.sidebar.subheader('SIGNIN', anchor='signin')
+st.sidebar.subheader('SIGNUP', anchor='signup')
 with st.sidebar.expander("SIGNUP"):
     r_user = st.sidebar.text_input('New Username', value="")
     r_password = st.sidebar.text_input('New Password', value="", type="password")
