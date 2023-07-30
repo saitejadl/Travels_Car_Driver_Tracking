@@ -15,7 +15,7 @@ def get_file():
     return repo, repo_file, file_text
 def write(text):
     r, rf,ft = get_file()
-    t = ft.replace("\n", "")[:-2] + text + '  '
+    t = ft.replace("\n", "")[:-1] + text + '  '
     r.update_file(rf.path,'streamlit commit',t,rf.sha,branch='main')
 
 
