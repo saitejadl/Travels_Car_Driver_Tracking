@@ -31,6 +31,7 @@ u_p = dict(zip(keys,vals))
 
 user_name = st.sidebar.text_input('Username', value="")
 password = st.sidebar.text_input('Password', value="", type="password")
+st.write(user_name,password,keys,vals)
 
 if user_name in u_p.keys():
   if password==u_p[user_name]:
