@@ -34,7 +34,7 @@ with co2:
 with co3:
   Time = st.time_input("Time", value=None,help="Time")
 text = f'\n{Driver_Name}|{Driver_Phone_Num}|{Car_Name}|{Car_Num}|{Route}|{Loc}|{str(Date)}|{str(Time)}'
-st.button('Add text to file',on_click = write,args = [text])
+st.button('SUBMIT',on_click = write,args = [text])
 
 # if st.button("Submit"):
 #   with open("Travels_Car_Driver_Tracking/Data.txt",'a') as f:
