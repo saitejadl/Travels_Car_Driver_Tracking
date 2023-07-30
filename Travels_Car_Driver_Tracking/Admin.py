@@ -50,6 +50,15 @@ elif user_name!='':
     st.sidebar.error("Invalid Username")
 st.sidebar.write("---")
 
+
+st.empty()
+st.empty()
+st.empty()
+st.empty()
+st.empty()
+st.empty()
+st.empty()
+st.empty()
 with st.sidebar.expander("SIGNUP"):
     r_user = st.sidebar.text_input('New Username', value="")
     r_password = st.sidebar.text_input('New Password', value="", type="password")
