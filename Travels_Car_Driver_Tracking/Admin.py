@@ -29,7 +29,7 @@ for i in a:
   vals.append(i.split(":")[1])
 u_p = dict(zip(keys,vals))
 
-st.sidebar.subheader('SIGNIN', anchor='signin')
+st.sidebar.subheader(':blue[SIGNIN]', anchor='signin')
 user_name = st.sidebar.text_input('Username', value="")
 password = st.sidebar.text_input('Password', value="", type="password")
 # st.write(u_p[user_name])
@@ -63,7 +63,7 @@ st.sidebar.write("###")
 st.sidebar.write("###")
 st.sidebar.write("###")
 
-st.sidebar.subheader('SIGNUP', anchor='signup')
+st.sidebar.subheader(':orange[SIGNUP]', anchor='signup')
 with st.sidebar.expander("SIGNUP"):
     r_user = st.sidebar.text_input('New Username', value="")
     r_password = st.sidebar.text_input('New Password', value="", type="password")
