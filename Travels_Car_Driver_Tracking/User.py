@@ -11,7 +11,7 @@ def write(text):
     r.update_file(rf.path,'streamlit commit',t,rf.sha,branch='main')
 def get_file():
     repo = g.get_user().get_repo(GITHUB_REPO)
-    repo_file = repo.get_contents('Travels_Car_Driver_Tracking/edit.txt')
+    repo_file = repo.get_contents('Travels_Car_Driver_Tracking/Data.txt')
     file_text = repo_file.decoded_content.decode()
     return repo, repo_file, file_text
 st.subheader("Balaji Travels Car Tracking")
