@@ -2,7 +2,6 @@ from github import Github
 from github import Auth
 import streamlit as st
 
-st.write(st.experimental_user)
 GITHUB_REPO = 'Travels_Car_Driver_Tracking'
 GITHUB_TOKEN = st.secrets["Git_Hub_Token"]
 auth = Auth.Token(GITHUB_TOKEN)
