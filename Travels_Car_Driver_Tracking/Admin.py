@@ -15,14 +15,13 @@ def get_file():
     return repo, repo_file, file_text
 def write(text):
     r, rf,ft = get_file()
-    t = ft.replace("\n", "") + text
+    t = ft + text
     r.update_file(rf.path,'streamlit commit',t,rf.sha,branch='main')
 
 
 st.subheader("Balaji Travels Admin")
 with open("Travels_Car_Driver_Tracking/Users_Password.txt",'r') as f:
-  a = f.readline().split(",")
-  st.sidebar.write(a)
+  a = f.read().split("\n")
 keys=[]
 vals=[]
 for i in a:
@@ -58,7 +57,7 @@ with st.expander("SIGNUP"):
     if(r_password==r_verify):
       Referal_Code = st.sidebar.text_input('Referal Code', value="")
       if Referal_Code=="saiteja":
-        st.sidebar.button('SIGNUP',on_click = write,args = [f',{r_user}:{r_password}'])
+        st.sidebar.button('SIGNUP',on_click = write,args = [f'\n{r_user}:{r_password}'])
       elif Referal_Code!='':
         st.sidebar.error("Invalid Referal")
 
