@@ -43,9 +43,9 @@ if user_name in u_p.keys():
     with c2:
       search = st.selectbox("Filter by:", df[col].unique())
     st.dataframe(data=df[df[col]==search],use_container_width=True)
-  elif password=='':
+  elif password!='':
     st.sidebar.error("Invalid Password")
-elif user_name=='':
+elif user_name!='':
     st.sidebar.error("Invalid Username")
 st.sidebar.write("---")
 
@@ -56,7 +56,7 @@ if(r_password==r_verify):
   Referal_Code = st.sidebar.text_input('Referal Code', value="")
   if Referal_Code=="saiteja":
     st.button('SIGNUP',on_click = write,args = [f'{r_user}:{r_password}'])
-  else:
+  elif!='':
     st.sidebar.error("Invalid Referal")
 
 
