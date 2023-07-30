@@ -9,6 +9,11 @@ def write(text):
     r, rf,ft = get_file()
     t = ft + text
     r.update_file(rf.path,'streamlit commit',t,rf.sha,branch='main')
+def get_file():
+    repo = g.get_user().get_repo(GITHUB_REPO)
+    repo_file = repo.get_contents('Travels_Car_Driver_Tracking/edit.txt')
+    file_text = repo_file.decoded_content.decode()
+    return repo, repo_file, file_text
 st.subheader("Balaji Travels Car Tracking")
 Name = st.text_input("Name of Driver", value=" ", help="Driver Name", placeholder=None)
 Ph_Num = st.text_input("Driver Phone Number", value=" ", help="Diver Phone Number", placeholder=None)
