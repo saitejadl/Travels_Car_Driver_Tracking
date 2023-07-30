@@ -51,14 +51,14 @@ elif user_name!='':
 st.sidebar.write("---")
 
 
-st.empty()
-st.empty()
-st.empty()
-st.empty()
-st.empty()
-st.empty()
-st.empty()
-st.empty()
+st.sidebar.empty()
+st.sidebar.empty()
+st.sidebar.empty()
+st.sidebar.empty()
+st.sidebar.empty()
+st.sidebar.empty()
+st.sidebar.empty()
+st.sidebar.empty()
 with st.sidebar.expander("SIGNUP"):
     r_user = st.sidebar.text_input('New Username', value="")
     r_password = st.sidebar.text_input('New Password', value="", type="password")
