@@ -49,15 +49,16 @@ elif user_name!='':
     st.sidebar.error("Invalid Username")
 st.sidebar.write("---")
 
-r_user = st.sidebar.text_input('New Username', value="")
-r_password = st.sidebar.text_input('New Password', value="", type="password")
-r_verify = st.sidebar.text_input('Re-Enter Password', value="", type="password")
-if(r_password==r_verify):
-  Referal_Code = st.sidebar.text_input('Referal Code', value="")
-  if Referal_Code=="saiteja":
-    st.sidebar.button('SIGNUP',on_click = write,args = [f'{r_user}:{r_password}'])
-  elif Referal_Code!='':
-    st.sidebar.error("Invalid Referal")
+with st.expander("SIGNUP"):
+    r_user = st.sidebar.text_input('New Username', value="")
+    r_password = st.sidebar.text_input('New Password', value="", type="password")
+    r_verify = st.sidebar.text_input('Re-Enter Password', value="", type="password")
+    if(r_password==r_verify):
+      Referal_Code = st.sidebar.text_input('Referal Code', value="")
+      if Referal_Code=="saiteja":
+        st.sidebar.button('SIGNUP',on_click = write,args = [f'{r_user}:{r_password}'])
+      elif Referal_Code!='':
+        st.sidebar.error("Invalid Referal")
 
 
 
