@@ -2,17 +2,30 @@ from github import Github
 from github import Auth
 import streamlit as st
 
+#______________Authenticating GITHUB________________#
 GITHUB_REPO = 'Travels_Car_Driver_Tracking'
 GITHUB_TOKEN = st.secrets["Git_Hub_Token"]
 auth = Auth.Token(GITHUB_TOKEN)
 g = Github(auth=auth)
 
 def get_file():
+    """
+    Parameters: None,
+    return    :repo, repo_file, file_textrepository,
+               file in the repository we mention in get_contents() method,
+               Text in the file
+    Reads the file in repository returns repository, file in the repository we mention in get_contents() method, text in the file
+    """
     repo = g.get_user().get_repo(GITHUB_REPO)
     repo_file = repo.get_contents('Travels_Car_Driver_Tracking/Data.txt')
     file_text = repo_file.decoded_content.decode()
     return repo, repo_file, file_text
 def write(text):
+    """
+    Parameter : text
+    return    : None
+    Commits the changes in the repository file
+    """
     r, rf,ft = get_file()
     t = ft + text
     r.update_file(rf.path,'streamlit commit',t,rf.sha,branch='main')
