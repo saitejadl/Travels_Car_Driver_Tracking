@@ -12,9 +12,7 @@ g = Github(auth=auth)
 def get_file():
     """
     Parameters: None,
-    return    :repo, repo_file, file_textrepository,
-               file in the repository we mention in get_contents() method,
-               Text in the file
+    return    :repo, repo_file, file_text
     Reads the file in repository returns repository, file in the repository we mention in get_contents() method, text in the file
     """
     repo = g.get_user().get_repo(GITHUB_REPO) 
