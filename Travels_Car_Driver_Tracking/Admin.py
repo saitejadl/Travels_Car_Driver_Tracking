@@ -61,20 +61,14 @@ if user_name in u_p.keys():
     st.sidebar.error("Invalid Password")
 elif user_name!='':
     st.sidebar.error("Invalid Username")
-st.sidebar.write("###")
-st.sidebar.write("###")
-st.sidebar.write("###")
-st.sidebar.write("###")
-st.sidebar.write("###")
-st.sidebar.write("###")
-st.sidebar.write("###")
-st.sidebar.write("---")
-st.sidebar.write("###")
-st.sidebar.write("###")
-st.sidebar.write("###")
-st.sidebar.write("###")
-st.sidebar.write("###")
+    
+for i in range(25):
+    st.sidebar.write("###")
+    if i==13:
+        st.sidebar.write("---")
 
+        
+    
 st.sidebar.subheader(':orange[SIGNUP]', anchor='signup')
 with st.sidebar.expander("SIGNUP"):
     r_user = st.sidebar.text_input('New Username', value="")
