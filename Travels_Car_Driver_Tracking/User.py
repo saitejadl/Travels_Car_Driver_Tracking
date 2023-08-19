@@ -7,7 +7,7 @@ from streamlit_lottie import st_lottie
 
 PAGE_NAME = "Balaji Travels Tracking | APP"
 PAGE_ICON = "🚗"
-st.set_page_config(page_title=PAGE_NAME, page_icon=PAGE_ICON)
+st.set_page_config(page_title=PAGE_NAME, page_icon=PAGE_ICON,layout="wide")
 url1 = requests.get("https://lottie.host/1c377706-56f9-4bca-a56d-bf61479a106c/GZP48vWoke.json")
 url2 = requests.get("https://lottie.host/8c0b8fe4-e485-464a-9acb-9cf8f7f54e50/CemLV4i4eD.json")
 if url1.status_code == 200:
