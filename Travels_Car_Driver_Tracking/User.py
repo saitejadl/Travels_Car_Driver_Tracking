@@ -16,8 +16,7 @@ if url2.status_code == 200:
 else:
     print("URL ERROR")
 st_lottie(url_json1)
-PAGE_ICON = "🚗"
-st.set_page_config(page_title="Balaji Travels Tracking | APP", page_icon=PAGE_ICON,layout="wide")
+
 #______________Authenticating GITHUB________________#
 GITHUB_REPO = 'Travels_Car_Driver_Tracking'
 GITHUB_TOKEN = st.secrets["Git_Hub_Token"]
@@ -46,6 +45,8 @@ def write(text):
     r.update_file(rf.path,'streamlit commit',t,rf.sha,branch='main')
 
 st.subheader("Balaji Travels Car Tracking")
+PAGE_ICON = "🚗"
+st.set_page_config(page_title="Balaji Travels Tracking | APP", page_icon=PAGE_ICON,layout="wide")
 
 Driver_Name = st.text_input("Name of Driver", value=" ", help="Driver Name", placeholder=None)                                #Driver_Name
 Driver_Phone_Num = st.text_input("Driver Phone Number", value=" ", help="Diver Phone Number", placeholder=None)               #Driver_Phone_Num
