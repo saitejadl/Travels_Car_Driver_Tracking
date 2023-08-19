@@ -14,10 +14,6 @@ if url1.status_code == 200:
     url_json1 = url1.json()
 else:
     print("URL ERROR")
-if url2.status_code == 200:
-    url_json2 = url2.json()
-else:
-    print("URL ERROR")
 
 #______________Authenticating GITHUB________________#
 GITHUB_REPO = 'Travels_Car_Driver_Tracking'
