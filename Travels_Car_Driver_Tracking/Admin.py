@@ -14,11 +14,7 @@ if url1.status_code == 200:
     url_json1 = url1.json()
 else:
     print("URL ERROR")
-col1,col2,col3 = st.columns([1,3,1])
-with col1:
-    pass
-with col2:
-    st_lottie(url_json1)
+
     
 #______________Authenticating GITHUB________________#
 GITHUB_REPO = 'Travels_Car_Driver_Tracking'
@@ -68,6 +64,11 @@ if user_name in u_p.keys():
     st.sidebar.success("SIGN IN")
     df = pd.read_csv("Travels_Car_Driver_Tracking/Data.txt",sep="|")
     st.dataframe(data=df,use_container_width=True)
+    col1,col2,col3 = st.columns([1,3,1])
+    with col1:
+        pass
+    with col2:
+        st_lottie(url_json1)
     c1,c2 = st.columns(2)
     with c1:
       col = st.selectbox("Filter by:", df.columns)
