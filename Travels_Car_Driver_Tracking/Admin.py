@@ -80,7 +80,11 @@ for i in range(25):
     if i==13:
         st.sidebar.write("---")
 
-        
+col1,col2,col3 = st.sidebar.columns([1,3,1])
+    with col1:
+        pass
+    with col2:
+        st_lottie(url_json1)
     
 st.sidebar.subheader(':orange[SIGNUP]', anchor='signup')
 with st.sidebar.expander("SIGNUP"):
@@ -93,9 +97,5 @@ with st.sidebar.expander("SIGNUP"):
         st.sidebar.button('SIGNUP',on_click = write,args = [f'{r_user}:{r_password}'])
       elif Referal_Code!='':
         st.sidebar.error("Invalid Referal")
-    col1,col2,col3 = st.sidebar.columns([1,3,1])
-    with col1:
-        pass
-    with col2:
-        st_lottie(url_json1)
+    
 
