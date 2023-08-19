@@ -81,10 +81,10 @@ for i in range(25):
         st.sidebar.write("---")
 
 col1,col2,col3 = st.sidebar.columns([1,3,1])
-    with col1:
-        pass
-    with col2:
-        st_lottie(url_json1)
+with col1:
+    pass
+with col2:
+    st_lottie(url_json1)
     
 st.sidebar.subheader(':orange[SIGNUP]', anchor='signup')
 with st.sidebar.expander("SIGNUP"):
