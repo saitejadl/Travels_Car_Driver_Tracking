@@ -1,6 +1,21 @@
 from github import Github
 from github import Auth
 import streamlit as st
+import json
+import requests
+from streamlit_lottie import st_lottie
+
+url1 = requests.get("https://lottie.host/1c377706-56f9-4bca-a56d-bf61479a106c/GZP48vWoke.json")
+url2 = requests.get("https://lottie.host/8c0b8fe4-e485-464a-9acb-9cf8f7f54e50/CemLV4i4eD.json")
+if url1.status_code == 200:
+    url_json1 = url1.json()
+else:
+    print("URL ERROR")
+if url2.status_code == 200:
+    url_json2 = url2.json()
+else:
+    print("URL ERROR")
+
 
 #______________Authenticating GITHUB________________#
 GITHUB_REPO = 'Travels_Car_Driver_Tracking'
