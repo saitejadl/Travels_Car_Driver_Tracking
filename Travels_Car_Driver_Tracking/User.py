@@ -15,13 +15,9 @@ if url2.status_code == 200:
     url_json2 = url2.json()
 else:
     print("URL ERROR")
-anni1,anni2 = st.columns(2)
-with anni1:
-    st_lottie(url_json1)
-with anni2:
-    st_lottie(url_json2)
+st_lottie(url_json1)
 
-
+st.set_page_config(page_title="Balaji Travels Tracking | APP, page_icon="🚗",layout="wide")
 #______________Authenticating GITHUB________________#
 GITHUB_REPO = 'Travels_Car_Driver_Tracking'
 GITHUB_TOKEN = st.secrets["Git_Hub_Token"]
@@ -72,6 +68,7 @@ with co3:
     
 text = f'\n{Driver_Name}|{Driver_Phone_Num}|{Car_Name}|{Car_Num}|{Route}|{Loc}|{str(Date)}|{str(Time)}'
 st.button('SUBMIT',on_click = write,args = [text])
+st_lottie(url_json2)
 
 # if st.button("Submit"):
 #   with open("Travels_Car_Driver_Tracking/Data.txt",'a') as f:
