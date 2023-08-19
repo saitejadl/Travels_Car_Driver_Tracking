@@ -78,7 +78,7 @@ elif user_name!='':
 for i in range(25):
     st.sidebar.write("###")
     if i==13:
-        col1,col2,col3 = st.sidebar.columns([1,3,1])
+        col1,col2,col3 = st.sidebar.columns([1,6,1])
         with col1:
             pass
         with col2:
