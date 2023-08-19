@@ -17,7 +17,7 @@ else:
     print("URL ERROR")
 st_lottie(url_json1)
 PAGE_ICON = "🚗"
-st.set_page_config(page_title="Balaji Travels Tracking | APP, page_icon=PAGE_ICON,layout="wide")
+st.set_page_config(page_title="Balaji Travels Tracking | APP", page_icon=PAGE_ICON,layout="wide")
 #______________Authenticating GITHUB________________#
 GITHUB_REPO = 'Travels_Car_Driver_Tracking'
 GITHUB_TOKEN = st.secrets["Git_Hub_Token"]
