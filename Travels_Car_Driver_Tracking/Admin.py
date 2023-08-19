@@ -2,6 +2,22 @@ from github import Github
 from github import Auth
 import streamlit as st
 import pandas as pd
+import json
+import requests
+from streamlit_lottie import st_lottie
+
+PAGE_NAME = "Admin Balaji Travels Tracking | APP"
+PAGE_ICON = "🗺️📌"
+st.set_page_config(page_title=PAGE_NAME, page_icon=PAGE_ICON,layout="wide")
+url1 = requests.get("https://lottie.host/67db9e87-0d87-4959-84b5-a33e9e73d39e/GF5O7NQSHU.json")
+if url1.status_code == 200:
+    url_json1 = url1.json()
+else:
+    print("URL ERROR")
+if url2.status_code == 200:
+    url_json2 = url2.json()
+else:
+    print("URL ERROR")
 
 #______________Authenticating GITHUB________________#
 GITHUB_REPO = 'Travels_Car_Driver_Tracking'
@@ -80,3 +96,8 @@ with st.sidebar.expander("SIGNUP"):
         st.sidebar.button('SIGNUP',on_click = write,args = [f'{r_user}:{r_password}'])
       elif Referal_Code!='':
         st.sidebar.error("Invalid Referal")
+col1,col2,col3 = st.columns([1,5,1])
+with col1:
+    pass
+with col2:
+    st_lottie(url_json1)
