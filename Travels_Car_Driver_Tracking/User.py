@@ -15,6 +15,11 @@ if url2.status_code == 200:
     url_json2 = url2.json()
 else:
     print("URL ERROR")
+anni1,anni2 = st.columns(2)
+with anni1:
+    st_lottie(url_json1)
+with anni2:
+    st_lottie(url_json2)
 
 
 #______________Authenticating GITHUB________________#
