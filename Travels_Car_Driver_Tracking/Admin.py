@@ -64,11 +64,6 @@ if user_name in u_p.keys():
     st.sidebar.success("SIGN IN")
     df = pd.read_csv("Travels_Car_Driver_Tracking/Data.txt",sep="|")
     st.dataframe(data=df,use_container_width=True)
-    col1,col2,col3 = st.columns([1,3,1])
-    with col1:
-        pass
-    with col2:
-        st_lottie(url_json1)
     c1,c2 = st.columns(2)
     with c1:
       col = st.selectbox("Filter by:", df.columns)
@@ -98,4 +93,9 @@ with st.sidebar.expander("SIGNUP"):
         st.sidebar.button('SIGNUP',on_click = write,args = [f'{r_user}:{r_password}'])
       elif Referal_Code!='':
         st.sidebar.error("Invalid Referal")
+    col1,col2,col3 = st.sidebar.columns([1,3,1])
+    with col1:
+        pass
+    with col2:
+        st_lottie(url_json1)
 
