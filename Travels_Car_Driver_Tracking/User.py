@@ -6,9 +6,12 @@ import json
 import requests
 from streamlit_lottie import st_lottie
 
+#-------Page Congigurations
 PAGE_NAME = "Balaji Travels Tracking | APP"
 PAGE_ICON = "🚗"
 st.set_page_config(page_title=PAGE_NAME, page_icon=PAGE_ICON,layout="wide")
+
+#-------Animation setup
 url1 = requests.get("https://lottie.host/1c377706-56f9-4bca-a56d-bf61479a106c/GZP48vWoke.json")
 url2 = requests.get("https://lottie.host/8c0b8fe4-e485-464a-9acb-9cf8f7f54e50/CemLV4i4eD.json")
 if url1.status_code == 200:
@@ -42,7 +45,6 @@ def get_file():
     repo_file = repo.get_contents('Travels_Car_Driver_Tracking/Data.txt')
     file_text = repo_file.decoded_content.decode()
     return repo, repo_file, file_text
-    
 def write(text):
     """
     Parameter : text
@@ -73,12 +75,16 @@ with co2:
   Date = st.date_input("Date", value=None,help='Date')                                                                        #Date
 with co3:
   Time = st.time_input("Time", value=None,help="Time")                                                                        #Time
-    
+
+# Writing the inputs as text to Data.txt file in gihub by | as a separator on clicking SUBMIT button
 text = f'\n{Driver_Name}|{Driver_Phone_Num}|{Car_Name}|{Car_Num}|{Route}|{Loc}|{str(Date)}|{str(Time)}'
 st.button('SUBMIT',on_click = write,args = [text])
+
 st.write("---")
+#------Contact INFO
 st.header("Contact:")
 st.write("+91 9542593585    |        lakshmisaitejadharmada@gmail.com")
+
 col1,col2,col3 = st.columns([1,5,1])
 with col1:
     pass
