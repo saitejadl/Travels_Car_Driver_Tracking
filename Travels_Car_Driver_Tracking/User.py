@@ -76,14 +76,15 @@ with co3:
     
 text = f'\n{Driver_Name}|{Driver_Phone_Num}|{Car_Name}|{Car_Num}|{Route}|{Loc}|{str(Date)}|{str(Time)}'
 st.button('SUBMIT',on_click = write,args = [text])
-
+st.write("---")
+st.header("Contact:")
+st.write("+91 9542593585    |        lakshmisaitejadharmada@gmail.com")
 col1,col2,col3 = st.columns([1,5,1])
 with col1:
     pass
 with col2:
     st_lottie(url_json2)
-st.header("Contact:")
-st.write("+91 9542593585    |        lakshmisaitejadharmada@gmail.com")
+
 
 # if st.button("Submit"):
 #   with open("Travels_Car_Driver_Tracking/Data.txt",'a') as f:
