@@ -19,7 +19,7 @@ if url1.status_code == 200:
 else:
     print("URL ERROR")
 
-    
+
 #______________Authenticating GITHUB________________#
 GITHUB_REPO = 'Travels_Car_Driver_Tracking'
 GITHUB_TOKEN = st.secrets["Git_Hub_Token"]
@@ -109,6 +109,7 @@ with st.sidebar.expander("SIGNUP"):
       elif Referal_Code!='':
         st.sidebar.error("Invalid Referal")
           
+#------Contact INFO        
 st.write("---")
 st.header("Contact:")
 st.write("+91 9542593585    |        lakshmisaitejadharmada@gmail.com")
