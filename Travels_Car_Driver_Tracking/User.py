@@ -20,11 +20,11 @@ if url2.status_code == 200:
 else:
     print("URL ERROR")
 
-col1,col2,col3 = st.columns([1,5,1])
-with col1:
-    pass
-with col2:
-    st_lottie(url_json1)
+# col1,col2,col3 = st.columns([1,5,1])
+# with col1:
+#     pass
+# with col2:
+#     st_lottie(url_json1)
 
 #______________Authenticating GITHUB________________#
 GITHUB_REPO = 'Travels_Car_Driver_Tracking'
@@ -83,7 +83,7 @@ with col1:
 with col2:
     st_lottie(url_json2)
 st.header("Contact:")
-st.wite("+91 9542593585    |        lakshmisaitejadharmada@gmail.com")
+st.write("+91 9542593585    |        lakshmisaitejadharmada@gmail.com")
 
 # if st.button("Submit"):
 #   with open("Travels_Car_Driver_Tracking/Data.txt",'a') as f:
