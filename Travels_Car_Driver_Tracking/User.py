@@ -1,3 +1,4 @@
+#>                                 https://travels-car-driver-tracking-user.streamlit.app/
 from github import Github
 from github import Auth
 import streamlit as st
@@ -81,6 +82,8 @@ with col1:
     pass
 with col2:
     st_lottie(url_json2)
+st.header("Contact:")
+st.wite("+91 9542593585    |        lakshmisaitejadharmada@gmail.com")
 
 # if st.button("Submit"):
 #   with open("Travels_Car_Driver_Tracking/Data.txt",'a') as f:
